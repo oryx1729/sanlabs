@@ -362,7 +362,10 @@ address.contact .line,
   transition: color 200ms ease;
 }
 
-.foot-row a:hover,
+.foot-row a:hover {
+  color: var(--ink);
+}
+
 .foot-row a[aria-current="page"] {
   color: var(--ink-2);
 }
@@ -415,4 +418,3 @@ address.contact .line,
     gap: 14px;
   }
 }
-
