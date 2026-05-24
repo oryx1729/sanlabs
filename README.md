@@ -1,6 +1,6 @@
 # Sanlabs Website
 
-Static website for [sanlabs.ai](https://sanlabs.ai/), prepared for GitHub Pages.
+Static website for [sanlabs.ai](https://sanlabs.ai/), published through GitHub Pages from [oryx1729/sanlabs](https://github.com/oryx1729/sanlabs).
 
 ## Structure
 
@@ -21,13 +21,15 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080`.
 
-## Publish To GitHub Pages
+## GitHub Pages
 
-1. Create a GitHub repository and push this repo to its `main` branch.
-2. In the GitHub repository, go to **Settings -> Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)`, then save.
-5. Under **Custom domain**, use `sanlabs.ai` and enable **Enforce HTTPS** once GitHub allows it.
+The repository is configured to publish from branch `main` and folder `/ (root)`.
+
+If the Pages settings are changed later, restore them in **Settings -> Pages**:
+
+1. Under **Build and deployment**, choose **Deploy from a branch**.
+2. Select branch `main` and folder `/ (root)`, then save.
+3. Under **Custom domain**, use `sanlabs.ai` and enable **Enforce HTTPS** once DNS has propagated and GitHub allows it.
 
 ## Namecheap DNS
 
@@ -39,7 +41,7 @@ For the apex domain `sanlabs.ai`, add these GitHub Pages records in Namecheap's 
 | A Record | `@` | `185.199.109.153` |
 | A Record | `@` | `185.199.110.153` |
 | A Record | `@` | `185.199.111.153` |
-| CNAME Record | `www` | `<github-user-or-org>.github.io` |
+| CNAME Record | `www` | `oryx1729.github.io` |
 
 Optional IPv6 records:
 
@@ -50,5 +52,4 @@ Optional IPv6 records:
 | AAAA Record | `@` | `2606:50c0:8002::153` |
 | AAAA Record | `@` | `2606:50c0:8003::153` |
 
-Replace `<github-user-or-org>` with the GitHub account or organization that owns the Pages repo. DNS changes can take up to 24 hours to propagate.
-
+DNS changes can take up to 24 hours to propagate.
